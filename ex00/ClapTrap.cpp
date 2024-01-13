@@ -1,20 +1,13 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap() :hit_points(10), energy_points(10), attack_damage(0)
 {
     std::cout << "Constructor called on " << name << std::endl;
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string name) :name(name), hit_points(10), energy_points(10), attack_damage(0)
 {
     std::cout << "Constructor called on " << name << std::endl;
-    this->name = name;
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap &claptrap)

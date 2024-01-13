@@ -3,31 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emukamada <emukamada@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ekamada <ekamada@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 15:18:39 by emukamada         #+#    #+#             */
-/*   Updated: 2023/12/21 16:34:11 by emukamada        ###   ########.fr       */
+/*   Updated: 2024/01/13 17:45:05 by ekamada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap() :hit_points(10), energy_points(10), attack_damage(0)
 {
-    std::cout << "[ClapTrap] Constructor called" << std::endl;
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
+    std::cout << "Constructor called on " << name << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string name) :name(name), hit_points(10), energy_points(10), attack_damage(0)
 {
-    std::cout << "[ClapTrap] Constructor called on " << name << std::endl;
-    this->name = name;
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
+    std::cout << "Constructor called on " << name << std::endl;
 }
+
 
 ClapTrap &ClapTrap::operator=(ClapTrap &claptrap)
 {
