@@ -2,28 +2,14 @@ NAME=a.out
 
 CXX=c++
 
-CXXFLAGS=-Wall -Wextra -Werror -std=c++98
-
-SRCS=main.cpp \
-	ClapTrap.cpp \
-	ScavTrap.cpp \
-	FragTrap.cpp
-
-OBJS=$(SRCS:.cpp=.o)
-
-all:$(NAME)
-
-$(NAME):$(OBJS)
-	$(CXX)NAME=a.out
-
-CXX=c++
-
 CXXFLAGS=-Wall -Wextra -Werror  -std=c++98
 
 SRCS= 	main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
 		FragTrap.cpp
+
+
 
 OBJS=$(addprefix objs/, $(SRCS:.cpp=.o))
 
@@ -49,13 +35,3 @@ fclean: clean
 re: fclean all
 
 debug: re
- $(CXXFLAGS) $(OBJS)
-
-clean:
-	rm -rf $(OBJS)
-
-fclean:clean
-	rm -rf $(NAME)
-
-re:fclean
-	make all
