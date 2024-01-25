@@ -29,7 +29,7 @@ FragTrap &FragTrap::operator=(FragTrap &fragtrap)
     return *this;
 }
 
-FragTrap::FragTrap(const FragTrap &fragtrap)
+FragTrap::FragTrap(const FragTrap &fragtrap) :ClapTrap(fragtrap)
 {
     name = fragtrap.name;
     hit_points = fragtrap.hit_points;

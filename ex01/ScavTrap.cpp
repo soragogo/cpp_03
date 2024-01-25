@@ -29,7 +29,7 @@ ScavTrap &ScavTrap::operator=(ScavTrap &scavtrap)
     return *this;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &scavtrap)
+ScavTrap::ScavTrap(const ScavTrap &scavtrap) :ClapTrap(scavtrap)
 {
     name = scavtrap.name;
     hit_points = scavtrap.hit_points;
