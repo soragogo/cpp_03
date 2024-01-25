@@ -17,3 +17,8 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: make -C ex00
+      - run: make fclean -C ex00
+      - run: make -C ex01
+      - run: make fclean -C ex01
+      - run: make -C ex02
+      - run: make fclean -C ex02
