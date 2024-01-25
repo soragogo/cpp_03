@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ekamada <ekamada@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:18:56 by emukamada         #+#    #+#             */
-/*   Updated: 2024/01/13 17:45:56 by ekamada          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap()
@@ -63,7 +51,12 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::guardGate()
 {
-    std::cout << name << " is now in guard-gate mode." << std::endl;
+    if (hit_points > 0 && energy_points > 0)
+    {
+        std::cout << name << " is now in guard-gate mode." << std::endl;
+    }
+    if (hit_points <= 0 || energy_points <= 0)
+        std::cout << name << " cannot enter guard-gate mode due to low hit points or energy." << std::endl;
 }
 
 ScavTrap::~ScavTrap()

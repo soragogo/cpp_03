@@ -9,8 +9,6 @@ SRCS= 	main.cpp \
 		ScavTrap.cpp \
 		FragTrap.cpp
 
-
-
 OBJS=$(addprefix objs/, $(SRCS:.cpp=.o))
 
 ifeq ($(MAKECMDGOALS), debug)

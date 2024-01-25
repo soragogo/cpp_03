@@ -1,14 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emukamada <emukamada@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 16:09:01 by emukamada         #+#    #+#             */
-/*   Updated: 2023/12/21 16:35:20 by emukamada        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
 
@@ -25,3 +16,5 @@ class FragTrap :public ClapTrap
         int getHitPoints();
         int getEnergyPoints();
 };
+
+#endif

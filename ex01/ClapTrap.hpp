@@ -1,21 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emukamada <emukamada@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:18:43 by emukamada         #+#    #+#             */
-/*   Updated: 2023/12/21 15:56:06 by emukamada        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#pragma once
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <ctime>
 
 class ClapTrap{
     public:
@@ -34,4 +21,4 @@ class ClapTrap{
         int attack_damage;
 };
 
-
+#endif

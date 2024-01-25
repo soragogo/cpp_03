@@ -1,10 +1,8 @@
-#pragma once
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 #include <string>
-#include <random>
-#include <cstdlib>
-#include <ctime>
 
 class ClapTrap{
     public:
@@ -23,4 +21,4 @@ class ClapTrap{
         int attack_damage;
 };
 
-
+#endif

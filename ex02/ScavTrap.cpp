@@ -6,7 +6,7 @@
 /*   By: emukamada <emukamada@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 15:18:56 by emukamada         #+#    #+#             */
-/*   Updated: 2023/12/21 16:34:11 by emukamada        ###   ########.fr       */
+/*   Updated: 2024/01/25 16:20:05 by emukamada        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,12 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::guardGate()
 {
-    std::cout << name << " is now in guard-gate mode." << std::endl;
+    if (hit_points > 0 && energy_points > 0)
+    {
+        std::cout << name << " is now in guard-gate mode." << std::endl;
+    }
+    if (hit_points <= 0 || energy_points <= 0)
+        std::cout << name << " cannot enter guard-gate mode due to low hit points or energy." << std::endl;
 }
 
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -10,8 +11,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+=======
+>>>>>>> 64bbfda (dekita)
 #include "FragTrap.hpp"
-
 
 FragTrap::FragTrap()
 {
@@ -64,7 +66,12 @@ void FragTrap::attack(const std::string& target)
 
 void FragTrap::highFivesGuys()
 {
-    std::cout << "Guys, high five!!!" << std::endl;
+    if (hit_points > 0 && energy_points > 0)
+    {
+        std::cout << "Guys, high five!!!" << std::endl;
+    }
+    if (hit_points <= 0 || energy_points <= 0)
+        std::cout << name << " cannot do a high five due to low hit points or energy." << std::endl;
 }
 
 int FragTrap::getHitPoints()
