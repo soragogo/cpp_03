@@ -2,7 +2,6 @@
 
 int main()
 {
-    ClapTrap* tmp = nullptr;
     ClapTrap claptrap("A");
     claptrap.takeDamage(3);
     claptrap.attack("goblin");
